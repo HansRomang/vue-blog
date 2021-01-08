@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum aseigase asga esefsef",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 css tips",
+      "body": "Lorem ipsueeeem aseigase eareff",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "ham",
+      "body": "zone",
+      "tags": [
+        "cocks123"
+      ],
+      "id": 3
+    },
+    {
+      "title": "ham",
+      "body": "zone",
+      "tags": [
+        "123cock"
+      ],
+      "id": 4
+    }
+  ]
+}
