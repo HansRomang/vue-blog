@@ -1,4 +1,5 @@
-# dojo-blog
+# Vuetiful Blog
+![](vuetifulblog.gif)
 
 ## Project setup
 ```
