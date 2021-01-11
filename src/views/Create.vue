@@ -16,6 +16,8 @@
 <script>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import {projectFirestore, timeStamp} from "../firebase/config"
+
 export default {
   setup() {
     const title = ref("");
@@ -36,19 +38,16 @@ export default {
     };
 
     const handleSubmit = async () => {
-      let post = { title: title.value, body: body.value, tags: tags.value };
+      let post = { title: title.value, body: body.value, tags: tags.value, createdAt: timeStamp() };
       try {
-        console.log("current post: " + post);
-        let data = await fetch("http://localhost:3000/posts", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(post)
-        });
-        console.log(data);
-        if (!data.ok) {
-          throw Error("no data available");
-        }
-        console.log("should be successful if it makes it here");
+        // let data = await fetch("http://localhost:3000/posts", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/json" },
+        //   body: JSON.stringify(post)
+				// });
+				
+				const res = await projectFirestore.collection('posts').add(post);
+				
       } catch (err) {
         error.value = err.message;
         console.log(err.value);
