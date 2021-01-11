@@ -7,7 +7,10 @@ import Tags from "../views/Tags.vue"
 const routes = [
   {
     path: '/',
-    name: 'Home',
+		name: 'Home',
+		meta: {
+			title: 'Test'
+		},
     component: Home
 	},
 	{
