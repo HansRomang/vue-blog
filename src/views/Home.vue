@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-		<h1>home</h1>
+		<h1>Homepage</h1>
 		<div v-if="error">{{error}}</div>
 		<div v-if="posts.length" class="layout">
 			<PostList :posts="posts" />
